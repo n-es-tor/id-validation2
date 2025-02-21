@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Validation</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%; /* Adjust as needed for phone-like responsiveness */
+            max-width: 400px; /* Limit width for phone-like feel */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        label {
+            margin-bottom: 8px;
+            text-align: left;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Important for padding */
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #response-message {
+            margin-top: 20px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h2>ID Validation Form</h2>
+    <form id="validation-form">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" value="MX" readonly>
+
+        <label for="document-type">Document Type:</label>
+        <input type="text" id="document-type" name="document-type" value="national-id" readonly>
+
+        <label for="front-image">Front Image:</label>
+        <input type="file" id="front-image" accept="image/*" required>
+
+        <label for="back-image">Back Image:</label>
+        <input type="file" id="back-image" accept="image/*" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="response-message"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
